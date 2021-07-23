@@ -48,6 +48,6 @@ For each of these measurement variables, the mean and standard deviation is prov
 3 additional columns contain information on metadata:
 1. the "set" column identifies if a subject was part of the training or the test group
 2. the "subject" column identifies individual study participants by consecutive numbers 1-30
-3. the |activity" column provides information of the performed activity: "walking", "upstairs", "downstairs", "sitting", "standing", or "laying"
+3. the "activity" column provides information of the performed activity: "walking", "upstairs", "downstairs", "sitting", "standing", or "laying"
 
 Please note: in dataset 3, these metadata columns are the 3 leftmost columns, in dataset 4, the metadata columns are the 3 rightmost columns.
