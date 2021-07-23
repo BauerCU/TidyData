@@ -7,4 +7,4 @@ First, the data is loaded from the downloaded folder "/UCI HAR Dataset/". The or
 
 Second, test and train data are combined, columns with information on mean() and std() are extracted with the grep() function, and activities are transformed into a factor with informative labels. This intermediate dataset is exported as a txt file "TidyData_mean-sd.txt".
 
-Finally, the data is splitted based on the metadata "set", "subject", and "activity", and the ColumnMeans are calculated. The resulting matrix is tranformed into a data frame and the metadata (which have been concatenated by the data transformations) are extracted into single columns again using gsub(). The resulting final dataframe "mini.df" is exported as txt file "TidyData_subjectAVG.txt.
+Finally, the data is splitted based on the metadata "set", "subject", and "activity", and the ColumnMeans are calculated. The resulting matrix is tranformed into a data frame and the metadata (which have been concatenated by the data transformations) are extracted into single columns again using gsub(). The resulting final dataframe "mini.df" is exported as txt file "TidyData_subjectAVG.txt".
