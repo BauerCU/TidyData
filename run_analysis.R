@@ -54,8 +54,8 @@ rm(D, D.test, D.train, feat.info, act.factor) # clean up environment
 write.table(D.df, file = "TidyData_mean-sd.txt", quote = F, sep = "\t", row.names = F)
 ### Continue Here!
 # Make 2nd table with mean per activity and subject
-mini.df <- D.df[,c(1:3,grep("mean",names(D.df)))]
-mini.list <- split(mini.df[,c(4:13)], paste(mini.df$set,mini.df$subject, mini.df$activity, sep = "_"))
+mini.df <- D.df
+mini.list <- split(mini.df[,c(4:69)], paste(mini.df$set,mini.df$subject, mini.df$activity, sep = "_"))
 mini.out <- sapply(mini.list, colMeans) # needs to be transposed
 mini.out <- t(mini.out) 
 mini.df <- as.data.frame(mini.out)
@@ -67,3 +67,4 @@ mini.df$activity <- gsub("(t\\w+)_(\\d+)_(\\w+)", "\\3",rownames(mini.df))
 row.names(mini.df) <- seq_along(row.names(mini.df))
 ## export table
 write.table(mini.df, file = "TidyData_subjectAVG.txt", quote = F, sep = "\t", row.names = F)
+rm(mini.list, mini.out) # clean up environment
