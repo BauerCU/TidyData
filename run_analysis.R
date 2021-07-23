@@ -50,9 +50,8 @@ act.factor <- factor(D.df$activity, levels = c(1:6),
                      labels = c("walking", "upstairs", "downstairs", "sitting", "standing", "laying"))
 D.df$activity <- act.factor
 rm(D, D.test, D.train, feat.info, act.factor) # clean up environment
-## export table
+## export table - intermediate dataset
 write.table(D.df, file = "TidyData_mean-sd.txt", quote = F, sep = "\t", row.names = F)
-### Continue Here!
 # Make 2nd table with mean per activity and subject
 mini.df <- D.df
 mini.list <- split(mini.df[,c(4:69)], paste(mini.df$set,mini.df$subject, mini.df$activity, sep = "_"))
