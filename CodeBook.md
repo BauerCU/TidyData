@@ -13,7 +13,7 @@ The following files are provided:
 3. The intermediate dataset containing mean and standard deviations of the measurements: TidyData_mean-sd.txt
 4. The final tidy datset containing the measurements from 3 averaged by subject and activity: TidyData_subjectAVG.txt
 
-Information on the measurements in the dataset 3 and 4:
+Information on the measurements in datasets 3 and 4:
 ---------------
 >The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 >
@@ -24,21 +24,30 @@ Information on the measurements in the dataset 3 and 4:
 >These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 >
->tBodyAcc-XYZ
->tGravityAcc-XYZ
->tBodyAccJerk-XYZ
->tBodyGyro-XYZ
->tBodyGyroJerk-XYZ
->tBodyAccMag
->tGravityAccMag
->tBodyAccJerkMag
->tBodyGyroMag
->tBodyGyroJerkMag
->fBodyAcc-XYZ
->fBodyAccJerk-XYZ
->fBodyGyro-XYZ
->fBodyAccMag
->fBodyAccJerkMag
->fBodyGyroMag
->fBodyGyroJerkMag
+>* tBodyAcc-XYZ
+>* tGravityAcc-XYZ
+>* tBodyAccJerk-XYZ
+>* tBodyGyro-XYZ
+>* tBodyGyroJerk-XYZ
+>* tBodyAccMag
+>* tGravityAccMag
+>* tBodyAccJerkMag
+>* tBodyGyroMag
+>* tBodyGyroJerkMag
+>* fBodyAcc-XYZ
+>* fBodyAccJerk-XYZ
+>* fBodyGyro-XYZ
+>* fBodyAccMag
+>* fBodyAccJerkMag
+>* fBodyGyroMag
+>* fBodyGyroJerkMag
 
+
+For each of these measurement variables, the mean and standard deviation is provided ("-mean" and "-std" suffix, respectively). 
+
+3 additional columns contain information on metadata:
+1. the "set" column identifies if a subject was part of the training or the test group
+2. the "subject" column identifies individual study participants by consecutive numbers 1-30
+3. the |activity" column provides information of the performed activity: "walking", "upstairs", "downstairs", "sitting", "standing", or "laying"
+
+Please note: in dataset 3, these metadata columns are the 3 leftmost columns, in dataset 4, the metadata columns are the 3 rightmost columns.
