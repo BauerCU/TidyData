@@ -11,7 +11,7 @@ The following files are provided:
 1. The run_analysis.R script to perform transformations on the raw data
 2. The README.md file providing information on the run_analysis.R script
 3. The intermediate dataset containing mean and standard deviations of the measurements: TidyData_mean-sd.txt
-4. The final tidy datset containing the measurements from 3 averaged by subject and activity: TidyData_subjectAVG.txt
+4. The final tidy dataset containing the measurements from 3 averaged by subject and activity: TidyData_subjectAVG.txt
 
 Information on the measurements in datasets 3 and 4:
 ---------------
